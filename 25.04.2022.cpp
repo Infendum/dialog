@@ -8,7 +8,8 @@ fraction::fraction()
 
 fraction::fraction(const unsigned int num, const unsigned int den)
 {
-	first
+	this->numerator = num;
+	this->denominator = den;
 }
 
 fraction fraction::operator+(const fraction& obj)
@@ -17,7 +18,10 @@ fraction fraction::operator+(const fraction& obj)
 		return(this->numerator + obj.numerator);
 	}
 	else if (this->denominator != obj.denominator) {
-		
+		numerator = this->numerator * obj.denominator;
+		obj.numerator == this->denominator * obj.numerator;
+		denominator = this->denominator * obj.denominator;
+		obj.denominator == this->denominator * obj.denominator;
 	}
 	return fraction();
 }

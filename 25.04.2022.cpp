@@ -15,13 +15,15 @@ fraction::fraction(const unsigned int num, const unsigned int den)
 fraction fraction::operator+(const fraction& obj)
 {
 	if (this->denominator == obj.denominator) {
-		return(this->numerator + obj.numerator);
+		return fraction(this->numerator + obj.numerator, denominator);
 	}
 	else if (this->denominator != obj.denominator) {
-		numerator = this->numerator * obj.denominator;
+		int result;
+		this->numerator = this->numerator * obj.denominator;
 		obj.numerator == this->denominator * obj.numerator;
 		denominator = this->denominator * obj.denominator;
 		obj.denominator == this->denominator * obj.denominator;
+		return fraction(this->numerator + obj.numerator, denominator);
 	}
 	return fraction();
 }
@@ -29,9 +31,16 @@ fraction fraction::operator+(const fraction& obj)
 fraction fraction::operator-(const fraction& obj)
 {
 	if (this->denominator == obj.denominator) {
-		return(this->numerator - obj.numerator);
+		return fraction(this->numerator - obj.numerator, denominator);
 	}
-	return fraction();
+	else if (this->denominator != obj.denominator) {
+		int result;
+		this->numerator = this->numerator * obj.denominator;
+		obj.numerator == this->denominator * obj.numerator;
+		denominator = this->denominator * obj.denominator;
+		obj.denominator == this->denominator * obj.denominator;
+		return fraction(this->numerator - obj.numerator, denominator);
+	}
 }
 
 fraction fraction::operator*(const fraction& obj)
@@ -44,6 +53,12 @@ fraction fraction::operator/(const fraction& obj)
 	return fraction(this->numerator * obj.denominator, this->denominator * obj.numerator);
 }
 
+fraction fraction::operator+(const int& value)
+{
+	int slozh;
+	return fraction();
+}
+
 fraction::operator float()
 {
 	if (this->numerator == 0 && this->denominator == 0)
@@ -53,4 +68,11 @@ fraction::operator float()
 		return FLT_MAX;
 	}
 	return (float)numerator / (float)denominator;
+}
+
+void fraction::show()
+{
+	std::cout << this->numerator;
+	std::cout << "/";
+	std::cout << this->denominator << std::endl;
 }

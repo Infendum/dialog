@@ -18,12 +18,13 @@ fraction fraction::operator+(const fraction& obj)
 		return fraction(this->numerator + obj.numerator, denominator);
 	}
 	else if (this->denominator != obj.denominator) {
-		int result;
-		this->numerator = this->numerator * obj.denominator;
-		obj.numerator == this->denominator * obj.numerator;
-		denominator = this->denominator * obj.denominator;
-		obj.denominator == this->denominator * obj.denominator;
-		return fraction(this->numerator + obj.numerator, denominator);
+		int numerator1 = obj.numerator;
+		int denomirator1 = obj.denominator;
+		this->numerator = this->numerator * denomirator1;
+		numerator1 = this->denominator * numerator1;
+		denominator = this->denominator * denomirator1;
+		denomirator1 == this->denominator * denomirator1;
+		return fraction(this->numerator + numerator1, denominator);
 	}
 	return fraction();
 }
@@ -34,12 +35,13 @@ fraction fraction::operator-(const fraction& obj)
 		return fraction(this->numerator - obj.numerator, denominator);
 	}
 	else if (this->denominator != obj.denominator) {
-		int result;
-		this->numerator = this->numerator * obj.denominator;
-		obj.numerator == this->denominator * obj.numerator;
-		denominator = this->denominator * obj.denominator;
-		obj.denominator == this->denominator * obj.denominator;
-		return fraction(this->numerator - obj.numerator, denominator);
+		int numerator1 = obj.numerator;
+		int denomirator1 = obj.denominator;
+		this->numerator = this->numerator * denomirator1;
+		numerator1 = this->denominator * numerator1;
+		denominator = this->denominator * denomirator1;
+		denomirator1 == this->denominator * denomirator1;
+		return fraction(this->numerator - numerator1, denominator);
 	}
 }
 
@@ -55,7 +57,7 @@ fraction fraction::operator/(const fraction& obj)
 
 fraction fraction::operator+(const int& value)
 {
-	int slozh;
+	
 	return fraction();
 }
 
@@ -76,3 +78,4 @@ void fraction::show()
 	std::cout << "/";
 	std::cout << this->denominator << std::endl;
 }
+

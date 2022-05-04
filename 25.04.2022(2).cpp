@@ -61,15 +61,18 @@ fraction fraction::operator/(const fraction& obj)
 
 fraction fraction::operator+(const int& value)
 {
-	fraction obj(value, 1) 
+	fraction obj(value, 1)
 		int numerator1 = obj.numerator;
-		int denomirator1 = obj.denominator;
-		this->numerator = this->numerator * 1;
-		value = this->denominator * value;
-		denominator = this->denominator * 1;
-		1 == this->denominator * 1;
-		return fraction(this->numerator + value, denominator);
-	
+	int denomirator1 = obj.denominator;
+	value = 1;
+	int den = 1;
+	this->numerator = this->numerator * den;
+	value = this->denominator * value;
+	denominator = this->denominator * den;
+	den == this->denominator * den;
+	return fraction(this->numerator + value, denominator);
+
+	return fraction();
 	return fraction();
 }
 
@@ -78,11 +81,13 @@ fraction fraction::operator-(const int& value)
 	fraction obj(value, 1)
 		int numerator1 = obj.numerator;
 	int denomirator1 = obj.denominator;
-	this->numerator = this->numerator * 1;
+	value = 1;
+	int den = 1;
+	this->numerator = this->numerator * den;
 	value = this->denominator * value;
-	denominator = this->denominator * 1;
-	1 == this->denominator * 1;
-	return fraction(this->numerator + value, denominator);
+	denominator = this->denominator * den;
+	den == this->denominator * den;
+	return fraction(this->numerator - value, denominator);
 
 	return fraction();
 	return fraction();

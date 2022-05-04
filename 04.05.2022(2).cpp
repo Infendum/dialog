@@ -5,9 +5,9 @@ using namespace std;
 template <typename MyType>
 void printArray(const MyType* array, int count)
 {
-	for (int ix = 0; ix < count; ix++)
-		cout << array[ix] << "   ";
-	cout << endl;
+    for (int ix = 0; ix < count; ix++)
+        cout << array[ix] << "   ";
+    cout << endl;
 }
 
 template <typename T>
@@ -19,13 +19,13 @@ int funcmax(const T* array, int count) {
         if (i == 0)
         {
             max = array[i];
-            
+
         }
         if (array[i] > max)
         {
             max = array[i];
         }
-       
+
     }
     return max;
 }
@@ -74,22 +74,55 @@ sort funcsort(sort* array, int count) {
     return *array;
 }
 
+template <typename bin>
+bin funcbin(bin* array, int left, int count, int vod) {
+    int mid = 0;
+    while (1) {
+        mid = (left + count) / 2;
+
+        if (vod < array[mid]) {
+            count = mid - 1;
+        }// смещаем правую границу поиска
+        else if (vod > array[mid]) {  // если искомое больше значения в ячейке
+            left = mid + 1;
+        }// смещаем левую границу поиска
+        else {                       // иначе (значения равны)
+            return mid;
+        }// функция возвращает индекс ячейки
+
+        if (left > count) {          // если границы сомкнулись 
+            return -1;
+        }
+    }
+    }
+
+
 int main()
 {
-	setlocale(LC_ALL, "RUSSIAN");
+    setlocale(LC_ALL, "RUSSIAN");
 
-	// размеры массивов
-	const int iSize = 10;
+    // размеры массивов
+    const int iSize = 10;
 
-	// массивы разных типов данных
-	int    iArray[iSize] = { 1, 2, 3, 4, 5, 11, 7, 8, 9, 10 };
+    // массивы разных типов данных
+    int    iArray[iSize] = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+    
 
-	// вызов локальной версии функции printArray для типа int через шаблон
-	cout << "\n Array type int:\n"; printArray(iArray, iSize);
+    // вызов локальной версии функции printArray для типа int через шаблон
+    cout << "\n Array type int:\n"; printArray(iArray, iSize);
 
     cout << "Наибольший элемент в массиве" << " " << funcmax(iArray, iSize) << std::endl;
     cout << "Наименьший элемент в массиве" << " " << funcmin(iArray, iSize) << std::endl;
     cout << "Сортировка" << " " << funcsort(iArray, iSize) << std::endl;
+    int a;
+    cin >> a;
+    int index;
+    index = funcbin(iArray, 0, iSize, a);
+    if (index >= 0) {
+        cout << "Двоичный поиск" << " " << index;
+    }
 
-	return 0;
+    
+
+    return 0;
 }

@@ -1,0 +1,271 @@
+/*sum = prompt('Введите число от 1 до 12');
+let textMonth
+switch (sum) {
+    case '1':
+        textMonth =  'Январь';
+        break;
+    case '2':
+        textMonth =  'Февраль';
+        break;
+    case '3':
+        textMonth =  'Март';
+        break;
+    case '4':
+        textMonth =  'Апрель';
+        break;
+    case '5':
+        textMonth =  'Май';
+        break;
+    case '6':
+        textMonth =  'Июнь';
+        break;
+    case '7':
+        textMonth =  'Июль';
+        break;
+    case '8':
+        textMonth =  'Август';
+        break;
+    case '9':
+        textMonth =  'Сентябрь';
+        break;
+    case '10':
+        textMonth =  'Октябрь';
+        break;
+    case '11':
+        textMonth =  'Ноябрь';
+        break;
+    case '12':
+        textMonth =  'Декабрь';
+        break;
+    default:
+        textMonth = 'Нет такого месяца';
+        break;
+}
+
+alert(textMonth);*/
+
+
+
+
+
+/*const number = parseInt(prompt('Четное или нечетное число'));
+alert(number % 2 === 0 ? number : number * 2);*/
+
+/*const hours = parseInt(prompt('Введите часы'));
+let dayName;
+
+    if (hours < 6) dayName = 'Ночь';
+    else if (hours >= 6 && hours < 12) dayName = 'Утро';
+    else if (hours >= 12 && hours < 18) dayName = 'День';
+    else if (hours >= 18 && hours < 24) dayName = 'Вечер';
+
+alert(dayName);*/
+
+
+
+
+/*const a = parseInt(prompt('Сторона А'));
+const b = parseInt(prompt('Сторона В'));
+const c = parseInt(prompt('Сторона С'));
+let perimetr = (a + b > c) ? 'Периметр = ' (a + b + c) : 'Ошибка сторон треугольника';
+   alert(perimetr);*/
+
+
+
+
+
+
+/*const number = prompt('Введите четырехзначное число');
+let digit_1 = number[0];
+let digit_2 = number[1];
+let digit_3 = number[2];
+let digit_4 = number[3];
+alert((digit_1 < digit_2 < digit_3 < digit_4) ? 'По возрастанию' : 'Не по возрастанию');*/
+
+
+
+
+
+/*const a = parseInt(prompt('Введите а'));
+const b = parseInt(prompt('Введите b'));
+const c = parseInt(prompt('Введите c'));
+let d = Math.pow(b, 2) - (4 * a * c);
+alert('Квадратный корень ' + d);*/
+
+
+
+
+
+/*const usd = 480.37;
+const rub = 8.35;
+const eur = 482.15;
+let tenge = prompt('Тенге');
+let currency = prompt('Валюта обмена').toLowerCase();
+let result;
+let currencyString;
+switch (currency) {
+    case 'доллар':
+        result = tenge / usd;
+        currencyString = 'USD';
+        break;
+    case 'рубль':
+        result = tenge / rub;
+        currencyString = 'EUR';
+        break;
+    case 'евро':
+        result = tenge / eur;
+        currencyString = 'EUR';
+        break;
+    default:
+        break;
+}
+alert(`${tenge} тг в ${currencyString} = ${result}`);*/
+
+
+
+
+
+/*const bilet = prompt('Номер билета');
+let leftPart = parseInt(bilet[0]) + parseInt(bilet[1]) + parseInt(bilet[2]);
+let rightPart = parseInt(bilet[3]) + parseInt(bilet[4]) + parseInt(bilet[5]);
+alert(leftPart === rightPart ? 'Билет счастливый' : 'Билет обычный');*/
+
+
+
+/*const hours1 = prompt('Часы 1');
+const mins1 = prompt('Минуты 1');
+const hours2 = prompt('Часы 2');
+const mins2 = prompt('Минуты 2');
+let hoursDiff = +hours1 - +hours2;
+let minsDiff = +mins1 - +mins2;
+if(hours > hours2 && mins1 - mins2){
+    alert(`Разница времени: ' + ${hoursDiff} ч. и ${minsDiff} мин.`);
+}
+else{
+    if(hours1 < hours2){
+        alert('Ошибка - начальные часы меньше конечных');
+    }
+    else{
+        alert('Ошибка - начальные минуты меньше конечных');
+    }
+}*
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+*/
+
+/*const firstNumber = parseInt(prompt('Число один'));
+const secondNumber = parseInt(prompt('Число два'));
+let i = 0;
+let j = 0;
+let firstDivider = [];
+let secondDivivder = [];
+while(i < firstNumber){
+    if(firstNumber % i === 0){
+        firstDivider.push(i);
+        i++;
+    }
+}
+
+while(i < secondNumber){
+    if(firstNumber % j === 0){
+        secondDivider.push(j);
+        j++;
+    }
+}
+alert(`делители числа 1 ${firstDivider.join()}`);
+alert(`делители числа 2 ${secondDivider.join()}`);*/
+
+
+
+
+/*const n = parseInt(prompt('Введите факториал'));
+let i = 1;
+let factorial = n;
+while(i < n){
+    factorial = factorial * i;
+    i++;
+}
+
+alert(factorial);*/
+
+
+
+/*let answer;
+do{
+answer = parseInt(prompt('Введите ответ: 2 + 2 * 2 ='));
+}while (answer !== 6);*/
+
+
+
+
+
+
+/*
+let count = 0;
+let number = 1000;
+
+do{
+    number = number / 2;
+    count++;
+}while(number > 50);
+
+alert (`Число: ${number}, количество делений: ${count}`);*/
+
+
+
+
+
+/*const userNumber = parseInt(prompt('Введите число до 100'));
+
+for(let i = 1; i <= 100; i++){
+    if(i % userNumber === 0){
+        document.write(`${i}<br>`);
+    }
+}*/
+
+
+
+
+/*const min = parseInt(prompt('Введите число до 100'));
+const max = parseInt(prompt('Введите число до 100'));
+for(let i = min; i <= max; i+=4){
+    document.write(`${i}<br>`);
+}*/
+
+
+/*const userNumber = parseInt(prompt('Введите число'));
+let counter = 0;
+for(let i = 1; i <= userNumber; i++){
+    if(userNumber % i === 0){
+        counter++;
+    }
+}
+document.write(counter <= 2 ? `Число ${userNumber} - простое`: `Число ${userNumber} - не простое`);*/
